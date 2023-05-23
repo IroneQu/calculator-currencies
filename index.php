@@ -10,16 +10,17 @@
 		$radio = $_POST['currency'];
 		switch ($radio) {
 			case "eur":
-				$message = "$input PLN to: " . $input * $eur . " EUR";
+				$message = "$input PLN to: " . round($input / $eur, 2) . " EUR";
 				break;
 			case "usd":
-				$message = "$input PLN to: " . $input * $usd . " USD";
+				$message = "$input PLN to: " . round($input / $usd, 2) . " USD";
 				break;
 			case "gbp":
-				$message = "$input PLN to: " . $input * $gbp . " GBP";
+				$message = "$input PLN to: " . round($input / $gbp, 2) . " GBP";
 				break;
 		}
 	}
+
 ?>
 <html lang="pl-PL">
 	<head>
