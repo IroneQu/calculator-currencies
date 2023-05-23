@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+	--green: rgb(19, 151, 107);
+	--dark: rgb(8, 68, 48);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background: linear-gradient(to top left, var(--green), var(--dark));
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+.container {
+	width: 40vw;
+	height: 60%;
+	background: linear-gradient(
+		to left top,
+		rgba(0, 0, 0, 0.25),
+		rgba(0, 0, 0, 0.35)
+	);
+	backdrop-filter: blur(10px);
+	border-radius: 20px;
+	text-align: center;
+}
+
+h1 {
+	font-size: 48px;
+	padding: 50px 0 30px 0;
+}
+
+h2 {
+	padding-bottom: 20px;
+}
+
+label {
+	font-size: 20px;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+input#pln {
+	width: 50%;
+	height: 30px;
+	margin: 20px 0;
+	padding: 0 10px;
+	border: 1px solid var(--green);
+	color: white;
+	border-radius: 10px;
+	outline: none;
+	font-size: 18px;
+	background-color: transparent;
+}
+
+input#pln:hover,
+input#pln:focus {
+	background-color: var(--green);
+}
+
+button {
+	width: 50%;
+	padding: 10px 0;
+	margin: 30px 0;
+	font-size: 24px;
+	background-color: transparent;
+	border: 2px solid var(--green);
+	border-radius: 10px;
+	color: white;
+}
+
+button:hover {
+	background-color: var(--green);
+	cursor: pointer;
+}
+
+.checkbox {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.colcheckbox {
+	padding: 20px;
+}
+
+input[type='radio'] {
+	position: relative;
+	cursor: pointer;
+}
+
+input[type='radio']:before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	left: -5px;
+	top: -5px;
+	border: 2px solid var(--dark);
+	border-radius: 100%;
+	background-color: var(--green);
+}
+
+input[type='radio']:checked:after {
+	content: '';
+	display: block;
+	width: 5px;
+	height: 5px;
+	background-color: var(--dark);
+	border: 2px solid var(--dark);
+	border-radius: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
